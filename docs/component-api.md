@@ -1,11 +1,9 @@
 # Open UI Global Design System Component API Guidelines
 
-This document outlines the APIU guidelines for the components that are part of
+This document outlines the API guidelines for the components that are part of
 the Open UI Global Design System (OUI). Additional guidelines will be needed for
 the tooling and apps that support the components, as well as for any
 framework-specific implementations of OUI.
-
-## Principles for API guidelines
 
 - This is a living document and meant to reflect reality. When a question arises
   that is not covered, the guidelines should be updated with the new guidance.
