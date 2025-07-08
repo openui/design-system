@@ -264,23 +264,31 @@ Use logical properties (`inset-block-start`, `margin-inline`) over physical
 properties (`top`, `margin-left`), to allow the components to be used in
 different writing systems.
 
-### Design tokens
-
-TODO: Define guidelines for design tokens
-
-#### Tier 1 Design tokens
-
-#### Tier 2 Design tokens
-
 ## JavaScript
 
-### Events
+### Events and methods
 
-TODO
+Native events and methods (and events and methods with native equivalents), like
+`click`, `input` or `change`, are emitted as-is. 
 
-### Methods
+```js
+const dateInput = document.querySelector('oui-date-input');
+dateInput.addEventListener('input', (event)=>{
+  console.log(event.target.value);
+});
+dateInput.showPicker();
+```
 
-TODO
+Events that are novel, such as a "tab change" event, bubble up, and are named in
+the format `oui-[action]`. Methods do not have a prefix.
+
+```js
+const tabElement = document.querySelector('oui-tabs');
+tabElement.addEventListener('oui-change', (event)=>{
+  console.log(event.target.value)
+});
+tabElement.show('#tab-1')
+```
 
 ## Credits
 
