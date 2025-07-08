@@ -212,7 +212,7 @@ Content that is displayed to users can be passed as an attribute or in a slot.
   tooling) in order to ensure the CSS is portable across frameworks and web
   technologies.
 - **Clarity over brevity** - CSS class naming conventions are verbose, but they
-  deliver clarity, legibility, and reslience in exchange.
+  deliver clarity, legibility, and resilience in exchange.
 - **Modular** - Component styles are fully modular in order to keep things tightly
   scoped and to avoid unintended style bleeding.
 - **Limit chaining and multiple selectors** - Chaining and descendant selectors
