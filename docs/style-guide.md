@@ -1,8 +1,8 @@
 # Open UI Global Design System Component Code Style Guidelines
 
-This document outlines the Code Style guidelines for the components that are part of
-the Open UI Global Design System (OUI). Additional guidelines will be needed for
-the tooling and apps that support the components, as well as for any
+This document outlines the Code Style guidelines for the components that are
+part of the Open UI Global Design System (OUI). Additional guidelines will be
+needed for the tooling and apps that support the components, as well as for any
 framework-specific implementations of OUI.
 
 - This is a living document and meant to reflect reality. When a question arises
@@ -44,8 +44,8 @@ the primary implementations.
 - **Use semantic markup.** That means using the `<button>` tag rather than `<div
   onclick="toggle()">` when a button is required, an `<a>` tag when a link is
   required, and so on.
-- **Use native HTML elements** (e.g. `<input>`, `<select>`) should be preferred over
-  custom elements whenever possible. Native elements provide a slew of
+- **Use native HTML elements** (e.g. `<input>`, `<select>`) should be preferred
+  over custom elements whenever possible. Native elements provide a slew of
   functionality and accessibility best practices out of the box.
 
 ### HTML conventions
@@ -60,8 +60,8 @@ the primary implementations.
   ensure the CSS is portable across frameworks and web technologies.
 - **Clarity over brevity** - CSS class naming conventions are verbose, but they
   deliver clarity, legibility, and resilience in exchange.
-- **Modular** - Component styles are fully modular in order to keep things tightly
-  scoped and to avoid unintended style bleeding.
+- **Modular** - Component styles are fully modular in order to keep things
+  tightly scoped and to avoid unintended style bleeding.
 - **Limit chaining and multiple selectors** - Chaining and descendant selectors
   should be avoided wherever possible in order to keep CSS as DOM-independent
   and modular as possible.
