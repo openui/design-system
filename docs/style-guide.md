@@ -68,7 +68,32 @@ the primary implementations.
 
 ### CSS conventions
 
-*TODO: Add class naming rules*
+#### BEM syntax
+
+OUI follows a [BEM](http://getbem.com/introduction/)-like syntax, extending it
+further to follow more of
+[BEMIT](http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/)-like
+conventions.
+
+BEM stands for "Block Element Modifier". Here's a breakdown of what that means:
+
+- **Block** is the primary component block (e.g. .oui-c-button)
+- **Element** is a child of the primary block (e.g. .oui-c-button__text)
+- **Modifier** is a variation of a component style (e.g. .oui-c-button--secondary)
+
+OUI extends BEM's conventions to create even more explicit, encapsulated class
+names.
+
+### Class prefixes
+
+In addition to the [global `oui-` namespace](#namespace), OUI uses class prefixes to provide
+additional clarity to the job a given class plays. OUI uses the following class
+prefix conventions:
+
+- **c** - for UI components, such as `.oui-c-button`
+- **l** - for layout-specific component styles, such as `.oui-l-container`
+- **u** - for utilities, such as `.oui-u-margin-bottom-none`
+- **is** - and has- for specific states, such as `.oui-is-active`
 
 *TODO: Add property usage rules, for instance preference for logical properties*
 
