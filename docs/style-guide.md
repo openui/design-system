@@ -31,7 +31,10 @@ the primary implementations.
 
 ### Namespace
 
-*TODO: Document namespace*
+In code, the OUI uses the namespace `oui`. This namespace should prefix class
+names, custom CSS properties, event names, and any other custom identifiers.
+Where the casing convention is uppercase, `OUI` is acceptable, but mixed case is
+not.
 
 ### Variants
 
