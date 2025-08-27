@@ -84,16 +84,16 @@ BEM stands for "Block Element Modifier". Here's a breakdown of what that means:
 OUI extends BEM's conventions to create even more explicit, encapsulated class
 names.
 
-### Class prefixes
+#### Class prefixes
 
-In addition to the [global `oui-` namespace](#namespace), OUI uses class prefixes to provide
-additional clarity to the job a given class plays. OUI uses the following class
-prefix conventions:
+In addition to the [`oui-` namespace](#namespace), OUI uses class prefixes to
+provide context about the role a class plays within the design system. OUI uses
+the following class prefix conventions:
 
 - **c** - for UI components, such as `.oui-c-button`
 - **l** - for layout-specific component styles, such as `.oui-l-container`
 - **u** - for utilities, such as `.oui-u-margin-bottom-none`
-- **is** - and has- for specific states, such as `.oui-is-active`
+- **is** - for specific states, such as `.oui-is-active`
 
 *TODO: Add property usage rules, for instance preference for logical properties*
 
