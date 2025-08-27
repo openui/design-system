@@ -70,7 +70,13 @@ the primary implementations.
 
 *TODO: Add class naming rules*
 
-*TODO: Add property usage rules, for instance preference for logical properties*
+#### Prefer logical properties
+
+Use [logical properties](https://www.w3.org/TR/css-logical-1/)
+(`inset-block-start`, `margin-inline`) over physical properties (`top`,
+`margin-left`), to allow the components to be used in different writing systems.
+Physical properties can be used when the positioning is not intended to be
+relative to the flow of the page.
 
 ## JavaScript
 
