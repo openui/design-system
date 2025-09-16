@@ -114,7 +114,7 @@ Rationale: Standard convention
 
 ### 2. Determine CSS style/methodology
 
-Options: BEM, BEMIT, OOCSS, SMACSS, ITCSS, SUIT CSS, CUBE CSS, RSCSS, Utility-first (Tailwind, Atomic)
+Options: BEM, BEMIT, OOCSS, SMACSS, ITCSS, SUIT CSS, CUBE CSS, RSCSS, Utility-first (Tailwind, Atomic), Parent class + raw elements inside.
 Propose: Some BEM-style syntax
 Rationale: Clarity over brevity. Hierarchical. At-a-glance. 
 Example:
