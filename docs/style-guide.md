@@ -58,14 +58,6 @@ Sturdy, well-adopted, etc
 ## Code style guidelines
 The ambition of this effort in addition to the multi-dimensional delivery means that getting names
 
-### Namespace
-
-*TODO: Document namespace*
-
-### Variants
-
-*TODO: Add guidelines for color, size and other variants*
-
 ## HTML
 
 ### HTML principles
@@ -85,184 +77,44 @@ The ambition of this effort in addition to the multi-dimensional delivery means 
 
 ### CSS principles
 
+- **Separation of structural and aesthetic styles** - Structural styles (e.g. `display`, `position`, etc) are critical to the structure and behavior of a component, while aesthetic styles (e.g. `background-color`, `font-family`, `border-radius`, `box-shadow`) are cosmetic in nature. Structural styles are included alongside component HTML and JS, while aesethic styles are handled through the design token system.
 - **Modular** - Modular CSS architecture is a best practice, is great for DX, is more matinainable, and helps avoid style collisions
   tightly scoped and to avoid unintended style bleeding.
 - **Clarity over brevity** - CSS class naming conventions prioritize clarity, legibility, and resilience over succinctness and saving bytes
-- **Limit specificity** - Overly-specific styles should be avoided for manageability, maintainability, and DX. 
-
-
-
-
-
-
-
+- **Limit specificity** - Overly-specific styles should be avoided for manageability, maintainability, and DX.
 
 ------
 
-
 ## HTML Naming Conventions
-- Using appropriate HTML tags is a given.
+- Use appropriate HTML tags and attributes
+- HTML commenting
 - TODO: populate HTML-specific naming conventions
 
 ## CSS Naming Conventions
 
-### 1. Determine CSS selectors
+It's important to establish well-considered CSS conventions that the global design system will follow. Of course, there are _many_ ways to author CSS, and there are many facets to authoring CSS. The goal is to consider all sensible options, vote on the implementation, and get to work implementing them. Here are the syntax-specific topics to decide on:
 
-Options: classes, data attributes, IDs (#yolo), other
-Propose: CSS classes
-Rationale: Standard convention
+### [1. Determine CSS selectors](https://github.com/openui/design-system/discussions/27)
 
-### 2. Determine CSS style/methodology
-
-Options: BEM, BEMIT, OOCSS, SMACSS, ITCSS, SUIT CSS, CUBE CSS, RSCSS, Utility-first (Tailwind, Atomic), Parent class + raw elements inside.
-Propose: Some BEM-style syntax
-Rationale: Clarity over brevity. Hierarchical. At-a-glance. 
-Example:
-
-```
-.alert
-
-.alert--success
-
-.alert--error
-
-.alert__icon
-
-.alert__body
-
-```
+### [2. Determine CSS style/methodology](https://github.com/openui/design-system/discussions/28)
 
 
-### 3. Determine a global namespace
+### 3. [Determine a global namespace](https://github.com/openui/design-system/discussions/29)
 
-Options: `oui-` `www-` `web-` `w3c-`
+### [4. Determine component naming standard](https://github.com/openui/design-system/discussions/31)
 
-Propose: 
-Rationale: 
+### [5. Determine variant names](https://github.com/openui/design-system/discussions/33)
 
-(note: It would be amazing to have something that hints at its global nature! `www`, `web` or `w3c` would be badass, but I also acknowledge those might be a more challenging sell)
+#### [5a. Determine component state-based names](https://github.com/openui/design-system/discussions/32)
 
-###4. Determine component naming standard
+#### [5b. Determine status variant names](https://github.com/openui/design-system/discussions/33)
 
-Options: `oui-alert`, `oui-button-group`, `oui-c-alert`,
-Propose: `oui-[component-name]`
-Rationale: Feels generally clean
+#### [5c: Sizing names](https://github.com/openui/design-system/discussions/34)
 
-### 5. Determine variant names
+#### [5d: Spacing names](https://github.com/openui/design-system/discussions/35)
 
-#### 5a. Determine component state-based names
-Code will use native pseudoselectors (e.g. `:hover`, `:focus-visible`, etc). However, there are other states to account for, in addition to artificially triggering a specific state of a component
+### [6: Media query names/units](https://github.com/openui/design-system/discussions/37)
 
-Options:
-- Modifier class: `button--hover`, `focus`, `active`, `disabled`  
-- Modifier class with `is-`: `is-hovered`, `is-active`, `is-disabled`  
-- Use attributes: `[disabled]`, `[aria-expanded="true"]` 
+### [7. Determine CSS declaration structure](https://github.com/openui/design-system/discussions/36)
 
-Propose:
-Rationale:
-
-#### 5b. Determine status variant names
-
-Options: 
-- BAD: `error`, `danger`, `critical`, `destructive`, `blocked`, `negative`
-- GOOD: `success`, `valid`, `positive`, `complete`
-- CAUTION: `caution`, `warning`, `
-- INFO: `info`, `neutral`, `default`
-
-Propose: `error`, `success`, `warning`, `info`
-Rationale: Common convention across many design systems
-
-
-5c: Sizing names
-
-Options:
-- `small`, `medium`, `large`, `extra-large`
-- `sm`, `md`, `lg`, `xl`
-- more
-
-Propose:
-Rationale:
-
-5d: Spacing names
-
-Options:
-- `small`, `medium`, `large`, `extra-large`
-- `sm`, `md`, `lg`, `xl`
-- `4`, `8`, `12`, `16`, etc
-
-Propose:
-Rationale:
-
-### 6. Component states
-Options: 
-- Pseudo-class names: hover, focus, active, disabled
-- Boolean prefix: is-hovered, is-active
-- ARIA/data attributes: [data-state="open"], [aria-invalid="true"]
-
-
-### 6: Media query names/units
-
-Note: this is weird as media queries don't support CSS custom properties. But it's probably good to have them as quasi-variables or potentially think about how to use Sass with them.
-
-Options: 
-- raw values `30rem`, `56rem`
-- `desktop`, `tablet`, `mobile`
-- `small`, `medium`, `large`, `extra-large`
-- `sm`, `md`, `lg`, `xl`
-- `bp-1`, `bp-2`, `bp-3`
-
-Propose:
-Rationale: 
-
-
-
-### 7. Determine CSS declaration structure
-
-Options: 
-
-Structural
-
-```
-.oui-alert {
-  /* Structural (hard-coded) styles */
-  [positioning]
-  [box model]
-  [other]
-
-  /* Themeable styles */
-  [color]
-  [typography]
-  [border]
-  [shadow]
-  [animation]
-  [other]
-}
-```
-
-Alphabetical 
-
-```
-.oui-alert {
-  align-content:
-  ...
-  z-index
-}
-```
-
-Proposal:
-Rationale:
-
-
-
-
-
-
-
-
-
-
-
-
-## Credits
-
-- https://vanilla-full.netlify.app/?path=/docs/documentation-guidelines--docs
+### [8. Determine commenting conventions](https://github.com/openui/design-system/discussions/38)
